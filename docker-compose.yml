@@ -1,5 +1,6 @@
 version: '3'
 services:
+  #Servicio ejemplo para remitir algunos logs. Prescindible.
   cliente-ejemplo:
     image: httpd
     ports:
@@ -26,6 +27,7 @@ services:
       - "24224:24224/udp"
       # Puerto al que remitir mensajes de syslog
       - "5140:5140/udp"
+      - "5141:5141/udp"
     depends_on:
       - graylog
   
